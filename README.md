@@ -33,7 +33,7 @@ The forecasting site for  aurora in Noviy Urengoy
 
 ### Mobile version
 
-![ezgif com-video-to-gif](https://github.com/Rost-Korol/project_aurora/assets/91683515/84ef5c7a-7b89-4e92-97ba-c520f1c1d34b)
+![ezgif com-video-to-gif (1)](https://github.com/Rost-Korol/project_aurora/assets/91683515/e598d117-f3cd-4235-8aa5-020befb8cc05)
 
 ---
 
