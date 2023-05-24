@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Северное сияние</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<link rel="icon" href="static/images/favicon.ico">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>Северное сияние в Новом Уренгое!</h1>
+				<p>Увидеть северное сияние можно ясной ночью. <br />
+				При этом геомагнитный K-индекс должен быть не меньше 4</p>
+			</header>
+
+		<!-- Week forecast section -->
+			<section class="forecast">
+				<div class="forecast_wrapper">
+					<div class="forecast_left">
+						<h4 class="forecast_title">Прогноз K-индекса на 7 дней</h4>
+
+						{% for day in dates_list: %}
+						<div class="forecast-bar">
+							<div class="forecast_day_week">
+								{{day}}
+							</div>
+							<div class="forecast-day-bar_{{ k_dict[day] }}">
+								<span class="kp_index">{{ k_dict[day] }}</span>
+							</div>
+							<img src="static/images/{{ id_dict[day] }}.png" alt="Clouds" class="cloud_img">
+							<div class="mobile"></div>
+							<img src="static/images/sunrise.png" alt="Sunrise" class="sunrise_img">
+							<h5 class="sun_time">{{ dark_dict[day]['Sunrise'] }}</h5>
+							<img src="static/images/sunset.png" alt="Sunset" class="sunset_img">
+							<h5 class="sun_time">{{ dark_dict[day]['Sunset'] }}</h5>
+						</div>
+						{% endfor %}
+					</div>
+
+					<div class="forecast_right">
+						<div class="circle_wrapper">
+							<div class="circle_title">
+								<h4>K-индекс</h4>
+								<span >Сегодня</span>
+							</div>
+							<div class="circle_{{ k_dict[dates_list[0]] }} all_cirlces">
+								<span class="today_kp_{{ k_dict[dates_list[0]] }}">{{ k_dict[dates_list[0]] }}</span>
+							</div>
+						</div>
+						<div class="weather_wrapper">
+							<div class="weather_title">
+								<h4>Погода</h4>
+							</div>
+							<div>Сейчас {{ now_temp }} &#xb0С</div>
+							<img class="Clouds2" src="static/images/{{ now_id }}.png" alt="Clouds">
+						</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+		<!-- Signup Form -->
+			<form id="signup-form" method="post" action="#">
+				<input type="email" name="email" id="email" placeholder="Подпишитесь на уведомления" />
+				<input type="submit" value="Sign Up" />
+			</form>
+
+		<!-- Footer -->
+			<!-- <footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer> -->
+
+		<!-- Scripts -->
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
